@@ -21,13 +21,13 @@ int GetterSetterFriend::geti(){
 //a friend func, note that its not part of the class but still has access to class internals
 bool isEqual_friend(GetterSetterFriend &gsf1, GetterSetterFriend &gsf2){
 	//note direct access (can read/write)
-	//gsf1.i = 9;
+	//gsf1.i = 9;	//demo direct private member access
 	return (gsf1.i == gsf1.i);
 }
 
 bool isEqual_using_getter(GetterSetterFriend &gsf1,GetterSetterFriend &gsf2){
 	//note getter access (can read only)
-	int b = gsf1.geti();
+	//int b = gsf1.geti();	//demo private member access via getter
 	return (gsf1.geti() == gsf1.geti());
 }
 
